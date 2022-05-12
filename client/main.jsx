@@ -1,8 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import 'normalize.css';
 import App from './App';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('app-main'),
-);
+const container = document.getElementById('app-main');
+createRoot(container).render(<App />);
