@@ -4,10 +4,13 @@
   "description": "微信公众号文章发布助手",
   "author": "mingdev <mingdev@163.com>",
   "license": "MIT",
+  "main": "./main/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client:dev": "cross-env NODE_ENV=development webpack server -c build/webpack.dev.config.js",
+    "main:dev": "cross-env NODE_ENV=development electronmon ."
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
@@ -20,9 +23,11 @@
     "@pieced/babel-plugin-auto-css-modules": "^1.0.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.6",
     "babel-loader": "^8.2.5",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "dotenv-webpack": "^7.1.0",
     "electron": "^18.2.0",
+    "electronmon": "^2.0.2",
     "eslint": "^8.15.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-friendly-formatter": "^4.0.1",
@@ -31,12 +36,9 @@
     "eslint-plugin-react": "^7.29.4",
     "eslint-webpack-plugin": "^3.1.1",
     "file-loader": "^6.2.0",
-    "friendly-errors-webpack-plugin": "^1.7.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
-    "node-notifier": "^10.0.1",
     "optimize-css-assets-webpack-plugin": "^6.0.1",
-    "portfinder": "^1.0.28",
     "postcss-loader": "^6.2.1",
     "postcss-preset-env": "^7.5.0",
     "react-refresh": "^0.13.0",
